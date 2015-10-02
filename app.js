@@ -2,8 +2,8 @@
 var port = 80; // Azure Web Apps only listens on ports 80 & 443
 var io = require( 'socket.io' ).listen( port );
 
-  io.set('transports', ['websocket','xhr-polling']);
-  io.set("polling duration", 10);
+io.set( 'transports', [ 'websocket' ] );
+io.set( 'origins', '*:*' );
 
 console.log( port );
 
